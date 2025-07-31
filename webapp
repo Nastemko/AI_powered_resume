@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume | Nicholas Stemkowski </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+        }
+        .modal-content {
+            position: relative;
+            margin: 10% auto;
+            width: 90%;
+            max-width: 600px;
+            animation: fadeIn 0.3s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .chat-bubble {
+            max-width: 80%;
+            padding: 10px 16px;
+            border-radius: 16px;
+            margin-bottom: 8px;
+            white-space: pre-wrap; /* Ensures line breaks are respected */
+        }
+        .user-bubble {
+            background-color: #2563eb; /* blue-600 */
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+        .ai-bubble {
+            background-color: #e5e7eb; /* gray-200 */
+            color: #1f2937; /* gray-800 */
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+        .typing-indicator span {
+            height: 8px;
+            width: 8px;
+            background-color: #9ca3af; /* gray-400 */
+            border-radius: 50%;
+            display: inline-block;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Left Column -->
+            <div class="lg:col-span-2 bg-white p-6 md:p-8 rounded-2xl shadow-sm">
+                <div class="mb-8">
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900"> Nicholas Stemkowski </h1>
+                    <p class="text-xl md:text-2xl text-blue-600 mt-1">Product Manager, Applied AI Research </p>
+                </div>
+
+                <div class="prose prose-lg max-w-none text-slate-600">
+                    <p>
+                        Educator Turned Tech Innovator and Product Engineering leader. I come from a complex, interpersonal profession where shared humanity is at the core of any success. I turned that experience into a thriving career in tech, and work as the product leader for our AI research team at IQVIA. With 4+ years of product experience driving AI/ML/NLP and data engineering product growth in the hi-tech sectors, I have a proven ability to lead cross-functional teams, define product visions and roadmaps, and execute go-to-market strategies.
+                    </p>
+                </div>
+
+                <hr class="my-8">
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Professional Experience</h2>
+                    <div class="space-y-8">
+                        <!-- Experience 1 -->
+                        <div class="flex gap-4">
+                            <div class="w-1 bg-blue-500 rounded-full mt-1"></div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-slate-800">Product Manager, AI Research Team</h3>
+                                <p class="text-slate-500">IQVIA Applied AI Sciences | September 2023 - Present</p>
+                                <ul class="list-disc list-outside text-slate-600 mt-2 pl-5 space-y-2">
+                                    <li>Led end-to-end productization of frontier AI research, taking IQVIA's first advanced clinical reasoning model (Generative AI product) from research concept to commercial deployment for pharmaceutical research and U.S. healthcare.</li>
+                                    <li>Drove rapid prototyping and go-to-market execution for an active learning toolkit enabling clinical SMEs to fine-tune ML models within existing workflows, demonstrating strong commercial traction with a 90% renewal rate.</li>
+                                    <li>Owned comprehensive product strategy and technical roadmap for three full-stack AI/NLP products deployed at leading clinical research institutions.</li>
+                                    <li>Architected and scaled AI infrastructure for production deployment, overseeing the rebuild of an internal AI orchestration platform to create an extensible, deployable NLP provider capable of processing millions of documents per hour.</li>
+                                    <li>Built secure model deployment infrastructure by leading creation of an ancillary model registry service enabling compliant deployment of any AI model on healthcare customer infrastructure.</li>
+                                    <li>Collaborated cross-functionally with UX and engineering teams to translate complex AI capabilities into intuitive user experiences for novel agentic and generative AI solutions.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Experience 2 -->
+                        <div class="flex gap-4">
+                            <div class="w-1 bg-blue-500 rounded-full mt-1"></div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-slate-800">Associate Product Manager - Head of Market Research</h3>
+                                <p class="text-slate-500">Predictable Innovation | 2022 - 2023</p>
+                                <ul class="list-disc list-outside text-slate-600 mt-2 pl-5 space-y-2">
+                                    <li>Conducted strategic market intelligence, positioning, and competitive analysis for Series C relationship intelligence platform Introhive, developing data-driven go-to-market strategies for new AI-powered offerings.</li>
+                                    <li>Demonstrated technical adaptability across AI domains, working with complex data management platforms, digital twin technologies, and AI applications for study feasibility in healthcare and life sciences.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-8">
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Key Projects</h2>
+                    <div class="space-y-4">
+                         <p class="text-slate-600">As a product leader, I've had the privilege of steering several innovative AI products from concept to launch. You can ask my AI clone for more details on these.</p>
+                        <div class="p-4 border rounded-lg">
+                            <h4 class="font-semibold text-lg text-slate-800">Advanced Clinical Reasoning Model</h4>
+                            <p class="text-slate-600">A generative AI product taken from research concept to commercial deployment for pharmaceutical research and U.S. healthcare.</p>
+                        </div>
+                        <div class="p-4 border rounded-lg">
+                            <h4 class="font-semibold text-lg text-slate-800">Active Learning Toolkit</h4>
+                            <p class="text-slate-600">A toolkit enabling clinical Subject Matter Experts to fine-tune ML models within their existing workflows, achieving high customer renewal rates.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <img src="https://placehold.co/400x400/e2e8f0/334155?text=NS" alt="Nicholas Stemkowski" class="rounded-full w-32 h-32 mx-auto mb-4 border-4 border-white shadow-md">
+                    <div class="text-center">
+                        <div class="flex justify-center gap-4 mt-4">
+                            <a href="https://www.linkedin.com/in/nickstemko" target="_blank" class="text-slate-500 hover:text-blue-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                             <a href="mailto:nastemko@gmail.com" class="text-slate-500 hover:text-blue-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm space-y-4">
+                    <button id="listen-button" class="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-blue-700 transition-all shadow-sm flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon></svg>
+                        Listen to my CV
+                    </button>
+                    <button id="chat-button" class="w-full bg-slate-800 text-white font-semibold py-3 px-4 rounded-lg hover:bg-slate-900 transition-all shadow-sm flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        Chat with my AI clone
+                    </button>
+                     <a href="#" class="w-full block text-center bg-white border border-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-lg hover:bg-slate-50 transition-all shadow-sm">
+                        Download PDF
+                    </a>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Product Management</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">AI/ML/NLP</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Go-to-Market Strategy</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Roadmapping</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">User Research</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">AI Infrastructure</span>
+                    </div>
+                </div>
+
+                 <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Education</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <p class="font-semibold text-slate-800">Master of Business Administration (MBA)</p>
+                            <p class="text-slate-500">Quantic School of Business & Technology</p>
+                        </div>
+                         <div>
+                            <p class="font-semibold text-slate-800">Master of Education (M.Ed.) in Sport Leadership</p>
+                            <p class="text-slate-500">Virginia Commonwealth University</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="text-center text-slate-500 mt-12 text-sm">
+            <p>Built with HTML, Tailwind CSS, and the Gemini API to create an interactive experience.</p>
+        </footer>
+    </div>
+
+    <!-- Audio Player Modal -->
+    <div id="audio-modal" class="modal">
+        <div class="modal-content bg-white rounded-lg shadow-xl p-6 text-center">
+            <h3 class="text-lg font-medium mb-4">Audio Resume</h3>
+            <div id="audio-container">
+                <!-- Loading or player will go here -->
+            </div>
+            <button id="close-audio-modal" class="mt-4 bg-slate-200 text-slate-800 px-4 py-2 rounded-lg hover:bg-slate-300">Close</button>
+        </div>
+    </div>
+
+    <!-- Chatbot Modal -->
+    <div id="chat-modal" class="modal">
+        <div class="modal-content bg-white rounded-lg shadow-xl flex flex-col h-[70vh]">
+            <div class="p-4 border-b flex justify-between items-center">
+                <h3 class="text-lg font-medium">Chat with my AI Clone</h3>
+                <button id="close-chat-modal" class="text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div id="chat-window" class="flex-1 p-4 overflow-y-auto flex flex-col gap-2">
+                <!-- Chat messages will be appended here -->
+                <div class="ai-bubble chat-bubble">
+                    Hello! I'm an AI assistant trained on Nicholas Stemkowski's experience. Feel free to ask me anything about his skills, projects, or professional background. For example: "Tell me about his work on the advanced clinical reasoning model."
+                </div>
+            </div>
+            <div class="p-4 border-t">
+                <div class="flex gap-2">
+                    <input type="text" id="chat-input" class="flex-1 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ask a question...">
+                    <button id="send-button" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Modal Control ---
+        const audioModal = document.getElementById('audio-modal');
+        const chatModal = document.getElementById('chat-modal');
+        const listenButton = document.getElementById('listen-button');
+        const chatButton = document.getElementById('chat-button');
+        const closeAudioModal = document.getElementById('close-audio-modal');
+        const closeChatModal = document.getElementById('close-chat-modal');
+
+        listenButton.addEventListener('click', () => {
+            audioModal.style.display = 'flex';
+            generateAndPlayAudio();
+        });
+        chatButton.addEventListener('click', () => chatModal.style.display = 'flex');
+        closeAudioModal.addEventListener('click', () => {
+            audioModal.style.display = 'none';
+            const audioPlayer = document.getElementById('audio-player');
+            if(audioPlayer) audioPlayer.pause();
+        });
+        closeChatModal.addEventListener('click', () => chatModal.style.display = 'none');
+        window.addEventListener('click', (event) => {
+            if (event.target == audioModal) {
+                audioModal.style.display = 'none';
+                 const audioPlayer = document.getElementById('audio-player');
+                if(audioPlayer) audioPlayer.pause();
+            }
+            if (event.target == chatModal) chatModal.style.display = 'none';
+        });
+
+        // --- Audio Generation (TTS) ---
+        const audioContainer = document.getElementById('audio-container');
+        let audioGenerated = false;
+        let audioUrl = null;
+
+        function base64ToArrayBuffer(base64) {
+            const binaryString = window.atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        }
+
+        function pcmToWav(pcmData, sampleRate) {
+            const numChannels = 1;
+            const bitsPerSample = 16;
+            const blockAlign = (numChannels * bitsPerSample) / 8;
+            const byteRate = sampleRate * blockAlign;
+            const dataSize = pcmData.length * 2; 
+
+            const buffer = new ArrayBuffer(44 + dataSize);
+            const view = new DataView(buffer);
+
+            // RIFF header
+            view.setUint32(0, 0x52494646, false); // "RIFF"
+            view.setUint32(4, 36 + dataSize, true);
+            view.setUint32(8, 0x57415645, false); // "WAVE"
+            // "fmt " sub-chunk
+            view.setUint32(12, 0x666d7420, false); // "fmt "
+            view.setUint32(16, 16, true); // Sub-chunk size
+            view.setUint16(20, 1, true); // Audio format (1 for PCM)
+            view.setUint16(22, numChannels, true);
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, byteRate, true);
+            view.setUint16(32, blockAlign, true);
+            view.setUint16(34, bitsPerSample, true);
+            // "data" sub-chunk
+            view.setUint32(36, 0x64617461, false); // "data"
+            view.setUint32(40, dataSize, true);
+
+            // Write PCM data
+            let offset = 44;
+            for (let i = 0; i < pcmData.length; i++, offset += 2) {
+                view.setInt16(offset, pcmData[i], true);
+            }
+
+            return new Blob([view], { type: 'audio/wav' });
+        }
+
+
+        async function generateAndPlayAudio() {
+            if (audioGenerated) {
+                const player = document.getElementById('audio-player');
+                if (player) player.play();
+                return; 
+            }
+            audioContainer.innerHTML = `<div class="text-slate-500">Generating audio...</div>`;
+            
+            const apiKey = ""; // API key will be injected by the environment
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+            
+            const cvText = `Say in a clear, professional, and friendly tone: Hello. I'm Nicholas Stemkowski. As an educator turned tech innovator, I work as the product leader for the AI research team at IQVIA. With over four years of product experience in AI and NLP, I have a proven ability to lead cross-functional teams, define product roadmaps, and execute go-to-market strategies for products that solve critical challenges.`;
+
+            const payload = {
+                contents: [{ parts: [{ text: cvText }] }],
+                generationConfig: {
+                    responseModalities: ["AUDIO"],
+                    speechConfig: { 
+                        voiceConfig: { 
+                            // VOICE CHANGE: Changed from "Rasalgethi" to "Charon"
+                            prebuiltVoiceConfig: { voiceName: "Charon" } 
+                        } 
+                    }
+                },
+                model: "gemini-2.5-flash-preview-tts"
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API Error: ${response.statusText}`);
+                }
+
+                const result = await response.json();
+                const part = result?.candidates?.[0]?.content?.parts?.[0];
+                const audioData = part?.inlineData?.data;
+                const mimeType = part?.inlineData?.mimeType;
+
+                if (audioData && mimeType && mimeType.startsWith("audio/")) {
+                    const sampleRateMatch = mimeType.match(/rate=(\d+)/);
+                    if (!sampleRateMatch) throw new Error("Sample rate not found in mime type");
+                    const sampleRate = parseInt(sampleRateMatch[1], 10);
+                    
+                    const pcmData = base64ToArrayBuffer(audioData);
+                    const pcm16 = new Int16Array(pcmData);
+                    const wavBlob = pcmToWav(pcm16, sampleRate);
+                    audioUrl = URL.createObjectURL(wavBlob);
+
+                    audioContainer.innerHTML = `<audio id="audio-player" controls autoplay><source src="${audioUrl}" type="audio/wav"></audio>`;
+                    audioGenerated = true;
+                } else {
+                    throw new Error("Audio data not found in API response.");
+                }
+            } catch (error) {
+                console.error("TTS Generation Error:", error);
+                audioContainer.innerHTML = `<div class="text-red-500">Could not generate audio. Please try again later.</div>`;
+            }
+        }
+
+        // --- Chatbot Interaction (Gemini API) ---
+        const chatWindow = document.getElementById('chat-window');
+        const chatInput = document.getElementById('chat-input');
+        const sendButton = document.getElementById('send-button');
+        let chatHistory = [];
+
+        // ===================================================================================
+        // === HOW TO UPDATE THE CHATBOT'S KNOWLEDGE (YOUR GOOGLE DRIVE ALTERNATIVE) ===
+        // ===================================================================================
+        // To update the AI clone's knowledge, copy the text from your documents (e.g., from 
+        // Google Drive, Notion, etc.) and paste it inside the backticks (``) of the 
+        // `systemPrompt` variable below. 
+        //
+        // You can add project details, case studies, answers to common questions, or anything
+        // else you want the chatbot to know. This is its brain!
+        // ===================================================================================
+        const systemPrompt = `You are an AI clone of Nicholas Stemkowski, a Product Manager for the AI Research Team at IQVIA. Your knowledge base is his resume and the additional context provided here. Answer questions from his perspective. Be professional, confident, and focused on his skills and experience. Do not go outside this role or mention you are an AI.
+
+        --- START OF KNOWLEDGE BASE ---
+
+        **Resume Summary:**
+        - Role: Product Manager, AI Research Team at IQVIA (Sept 2023 - Present).
+        - Key Projects:
+          1. Advanced Clinical Reasoning Model: A Generative AI product taken from research concept to commercial deployment for pharmaceutical research and U.S. healthcare.
+          2. Active Learning Toolkit: A tool for clinical SMEs to fine-tune ML models, which achieved a 90% renewal rate.
+        - Responsibilities: End-to-end productization of AI research, rapid prototyping, GTM execution, product strategy, scaling AI infrastructure, and building secure model deployment solutions.
+        - Previous Role: Associate Product Manager at Predictable Innovation (2022-2023), focused on market intelligence for an AI platform.
+
+        **Additional Context (PASTE YOUR TEXT FROM GOOGLE DRIVE HERE):**
+        - My product philosophy is rooted in...
+        - A major challenge I solved on the Active Learning Toolkit project was...
+        - I am passionate about the intersection of AI and sustainable business models because...
+
+        --- END OF KNOWLEDGE BASE ---`;
+
+        chatHistory.push({ role: "system", parts: [{ text: systemPrompt }] });
+        
+        async function handleSendMessage() {
+            const userMessage = chatInput.value.trim();
+            if (!userMessage) return;
+
+            appendMessage(userMessage, 'user');
+            chatInput.value = '';
+            chatInput.disabled = true;
+            sendButton.disabled = true;
+
+            const typingIndicator = appendTypingIndicator();
+
+            chatHistory.push({ role: "user", parts: [{ text: userMessage }] });
+
+            const apiKey = ""; // API key will be injected by the environment
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            const payload = { contents: chatHistory };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`API Error: ${response.statusText}`);
+                }
+
+                const result = await response.json();
+                
+                typingIndicator.remove();
+                
+                if (result.candidates && result.candidates.length > 0 && result.candidates[0].content.parts[0].text) {
+                    const aiMessage = result.candidates[0].content.parts[0].text;
+                    appendMessage(aiMessage, 'ai');
+                    chatHistory.push({ role: "model", parts: [{ text: aiMessage }] });
+                } else {
+                    appendMessage("I'm sorry, I couldn't process that. Please try again.", 'ai');
+                }
+
+            } catch (error) {
+                console.error("Chatbot Error:", error);
+                typingIndicator.remove();
+                appendMessage("There was an error connecting to the service. Please check your connection or try again later.", 'ai');
+            } finally {
+                chatInput.disabled = false;
+                sendButton.disabled = false;
+                chatInput.focus();
+            }
+        }
+
+        function appendMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = text;
+            messageDiv.classList.add('chat-bubble', sender === 'user' ? 'user-bubble' : 'ai-bubble');
+            chatWindow.appendChild(messageDiv);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        function appendTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.classList.add('ai-bubble', 'chat-bubble', 'typing-indicator');
+            typingDiv.innerHTML = '<span></span><span></span><span></span>';
+            chatWindow.appendChild(typingDiv);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+            return typingDiv;
+        }
+
+        sendButton.addEventListener('click', handleSendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleSendMessage();
+            }
+        });
+
+    </script>
+</body>
+</html>
