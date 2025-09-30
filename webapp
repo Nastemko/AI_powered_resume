@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Resume | Nicholas Stemkowski </title>
+    <title>Interactive Resume | Nicholas Stemkowski</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +42,6 @@
             padding: 10px 16px;
             border-radius: 16px;
             margin-bottom: 8px;
-            white-space: pre-wrap; /* Ensures line breaks are respected */
         }
         .user-bubble {
             background-color: #2563eb; /* blue-600 */
@@ -80,81 +79,63 @@
             <!-- Left Column -->
             <div class="lg:col-span-2 bg-white p-6 md:p-8 rounded-2xl shadow-sm">
                 <div class="mb-8">
-                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900"> Nicholas Stemkowski </h1>
-                    <p class="text-xl md:text-2xl text-blue-600 mt-1">Product Manager, Applied AI Research </p>
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900">Nicholas Stemkowski</h1>
+                    <p class="text-xl md:text-2xl text-blue-600 mt-1">Product Leader, Applied AI & Generative Systems</p>
                 </div>
 
                 <div class="prose prose-lg max-w-none text-slate-600">
                     <p>
-                        Educator Turned Tech Innovator and Product Engineering leader. I come from a complex, interpersonal profession where shared humanity is at the core of any success. I turned that experience into a thriving career in tech, and work as the product leader for our AI research team at IQVIA. With 4+ years of product experience driving AI/ML/NLP and data engineering product growth in the hi-tech sectors, I have a proven ability to lead cross-functional teams, define product visions and roadmaps, and execute go-to-market strategies.
+                        A hands-on product leader (4+ years) specialized in rapidly translating generative AI and agentic frameworks from frontier research into robust, high-impact, and scalable production systems. I define the strategy and roadmap for applied AI layers that augment the scientific method in highly regulated healthcare and life sciences sectors. My expertise combines technical fluency with grounded product sense, ensuring complex AI capabilities are synthesized into intuitive, indispensable tools for technical expert personas. I thrive in fast-paced, ambiguous and ambitious startup environments but am experienced and adept in large multinational companies.
                     </p>
                 </div>
 
                 <hr class="my-8">
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Professional Experience</h2>
-                    <div class="space-y-8">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Functional Expertise & Career Highlights</h2>
+                    <div class="space-y-6">
                         <!-- Experience 1 -->
                         <div class="flex gap-4">
-                            <div class="w-1 bg-blue-500 rounded-full mt-1"></div>
+                            <div class="w-1 bg-blue-500 rounded-full"></div>
                             <div>
-                                <h3 class="text-xl font-semibold text-slate-800">Product Manager, AI Research Team</h3>
+                                <h3 class="text-xl font-semibold text-slate-800">Product Manager, Advanced AI Methods and Emerging Offerings</h3>
                                 <p class="text-slate-500">IQVIA Applied AI Sciences | September 2023 - Present</p>
                                 <ul class="list-disc list-outside text-slate-600 mt-2 pl-5 space-y-2">
-                                    <li>Led end-to-end productization of frontier AI research, taking IQVIA's first advanced clinical reasoning model (Generative AI product) from research concept to commercial deployment for pharmaceutical research and U.S. healthcare.</li>
-                                    <li>Drove rapid prototyping and go-to-market execution for an active learning toolkit enabling clinical SMEs to fine-tune ML models within existing workflows, demonstrating strong commercial traction with a 90% renewal rate.</li>
-                                    <li>Owned comprehensive product strategy and technical roadmap for three full-stack AI/NLP products deployed at leading clinical research institutions.</li>
-                                    <li>Architected and scaled AI infrastructure for production deployment, overseeing the rebuild of an internal AI orchestration platform to create an extensible, deployable NLP provider capable of processing millions of documents per hour.</li>
-                                    <li>Built secure model deployment infrastructure by leading creation of an ancillary model registry service enabling compliant deployment of any AI model on healthcare customer infrastructure.</li>
-                                    <li>Collaborated cross-functionally with UX and engineering teams to translate complex AI capabilities into intuitive user experiences for novel agentic and generative AI solutions.</li>
+                                    <li><strong>Pioneered End-to-End Productization of Foundational AI Capabilities.</strong> Led the product vision, strategy, and commercial deployment of the organization's first advanced clinical reasoning model (Generative AI product), successfully translating frontier AI research into a tangible, transformative tool for pharmaceutical research and U.S. healthcare. Partnered with over 30 enterprise teams to scale and secure 5 ongoing deployments, demonstrating the ability to move from research concept to robust, production-ready solution.</li>
+                                    <li><strong>Defined and Launched Novel Applied AI Solutions for Scientific Workflows.</strong> Owned the comprehensive product strategy and technical roadmap for three full-stack AI/NLP products deployed at leading clinical research institutions. This included leading the execution of an active learning toolkit that augmented the scientific method by enabling clinical subject matter experts (SMEs) to fine-tune ML models within existing workflows, resulting in a 90% renewal rate and validated product-market fit.</li>
+                                    <li><strong>Architected and Scaled Enterprise AI Infrastructure.</strong> Demonstrated strong technical fluency and hands-on experience by architecting the production deployment infrastructure. Oversaw the rebuild of an internal AI orchestration platform to create a high-throughput NLP provider, capable of processing millions of documents per hour, separating production-ready solutions from demos and ensuring the reliability required for enterprise-grade solutions.</li>
+                                    <li><strong>Developed Multi-Agent and Generative AI Frameworks.</strong> Spearheaded the design and product requirements for novel agentic and generative AI solutions, including the development of multi-agent AI frameworks for patient registries and clinical quality measures. This work directly required translating complex data requirements into implementable model context engineering frameworks for external enterprise customers.</li>
+                                    <li><strong>Ensured Robustness and Compliance for Technical Constraints.</strong> Led the creation of a secure model registry service to enable compliant deployment of any AI model on sensitive healthcare customer infrastructure, showcasing expertise in solving complex technical and regulatory challenges, including data privacy compliance, to ensure all shipped AI tools were reliable and powerful.</li>
                                 </ul>
                             </div>
                         </div>
                         <!-- Experience 2 -->
                         <div class="flex gap-4">
-                            <div class="w-1 bg-blue-500 rounded-full mt-1"></div>
+                            <div class="w-1 bg-blue-500 rounded-full"></div>
                             <div>
                                 <h3 class="text-xl font-semibold text-slate-800">Associate Product Manager - Head of Market Research</h3>
                                 <p class="text-slate-500">Predictable Innovation | 2022 - 2023</p>
                                 <ul class="list-disc list-outside text-slate-600 mt-2 pl-5 space-y-2">
-                                    <li>Conducted strategic market intelligence, positioning, and competitive analysis for Series C relationship intelligence platform Introhive, developing data-driven go-to-market strategies for new AI-powered offerings.</li>
-                                    <li>Demonstrated technical adaptability across AI domains, working with complex data management platforms, digital twin technologies, and AI applications for study feasibility in healthcare and life sciences.</li>
+                                    <li>Conducted strategic market intelligence, positioning, and competitive analysis for Series C relationship intelligence platform Introhive, developing data-driven go-to-market strategies for new AI-powered offerings and maintaining an objective view of market capabilities and competitive positioning.</li>
+                                    <li>Led and executed opportunity scoring initiatives to prioritize markets and segments, delivering launch strategies to medtech, augmented reality, data management companies in healthcare and life sciences.</li>
+                                    <li>Designed and executed global partnership strategy for new market entry for enterprise digital twin provider in energy sector.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <hr class="my-8">
-
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-6">Key Projects</h2>
-                    <div class="space-y-4">
-                         <p class="text-slate-600">As a product leader, I've had the privilege of steering several innovative AI products from concept to launch. You can ask my AI clone for more details on these.</p>
-                        <div class="p-4 border rounded-lg">
-                            <h4 class="font-semibold text-lg text-slate-800">Advanced Clinical Reasoning Model</h4>
-                            <p class="text-slate-600">A generative AI product taken from research concept to commercial deployment for pharmaceutical research and U.S. healthcare.</p>
-                        </div>
-                        <div class="p-4 border rounded-lg">
-                            <h4 class="font-semibold text-lg text-slate-800">Active Learning Toolkit</h4>
-                            <p class="text-slate-600">A toolkit enabling clinical Subject Matter Experts to fine-tune ML models within their existing workflows, achieving high customer renewal rates.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
             <!-- Right Column -->
             <div class="space-y-8">
                 <div class="bg-white p-6 rounded-2xl shadow-sm">
-                    <img src="https://placehold.co/400x400/e2e8f0/334155?text=NS" alt="Nicholas Stemkowski" class="rounded-full w-32 h-32 mx-auto mb-4 border-4 border-white shadow-md">
+                    <img src="https://placehold.co/400x400/e2e8f0/334155?text=Your\nPhoto" alt="Nicholas Stemkowski" class="rounded-full w-32 h-32 mx-auto mb-4 border-4 border-white shadow-md">
                     <div class="text-center">
                         <div class="flex justify-center gap-4 mt-4">
-                            <a href="https://www.linkedin.com/in/nickstemko" target="_blank" class="text-slate-500 hover:text-blue-600 transition-colors">
+                            <a href="#" class="text-slate-500 hover:text-blue-600 transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                             </a>
-                             <a href="mailto:nastemko@gmail.com" class="text-slate-500 hover:text-blue-600 transition-colors">
+                             <a href="#" class="text-slate-500 hover:text-blue-600 transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                             </a>
                         </div>
@@ -179,25 +160,22 @@
                     <h3 class="text-xl font-bold text-slate-900 mb-4">Skills</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Product Management</span>
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">AI/ML/NLP</span>
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Go-to-Market Strategy</span>
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Roadmapping</span>
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">User Research</span>
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">AI Infrastructure</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Generative AI</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Agentic Frameworks</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">AI Strategy</span>
+                         <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Roadmapping</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Enterprise AI</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Healthcare & Life Sci</span>
                     </div>
                 </div>
 
-                 <div class="bg-white p-6 rounded-2xl shadow-sm">
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">Education</h3>
-                    <div class="space-y-3">
-                        <div>
-                            <p class="font-semibold text-slate-800">Master of Business Administration (MBA)</p>
-                            <p class="text-slate-500">Quantic School of Business & Technology</p>
-                        </div>
-                         <div>
-                            <p class="font-semibold text-slate-800">Master of Education (M.Ed.) in Sport Leadership</p>
-                            <p class="text-slate-500">Virginia Commonwealth University</p>
-                        </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Described by Colleagues</h3>
+                    <div class="space-y-4">
+                        <blockquote class="border-l-4 border-blue-500 pl-4">
+                            <p class="text-slate-600 italic">"Nicholas has a unique talent for translating complex technical concepts into clear, compelling product visions. A true asset to any team."</p>
+                            <cite class="text-slate-500 text-sm not-italic block mt-2">- Former Manager</cite>
+                        </blockquote>
                     </div>
                 </div>
             </div>
@@ -228,7 +206,7 @@
             <div id="chat-window" class="flex-1 p-4 overflow-y-auto flex flex-col gap-2">
                 <!-- Chat messages will be appended here -->
                 <div class="ai-bubble chat-bubble">
-                    Hello! I'm an AI assistant trained on Nicholas Stemkowski's experience. Feel free to ask me anything about his skills, projects, or professional background. For example: "Tell me about his work on the advanced clinical reasoning model."
+                    Hello! I'm an AI assistant trained on Nicholas Stemkowski's experience. Feel free to ask me anything about his skills, projects, or professional background. For example, you could ask, "How did he pioneer the productization of AI capabilities at IQVIA?"
                 </div>
             </div>
             <div class="p-4 border-t">
@@ -323,27 +301,20 @@
 
         async function generateAndPlayAudio() {
             if (audioGenerated) {
-                const player = document.getElementById('audio-player');
-                if (player) player.play();
-                return; 
+                return; // Don't regenerate
             }
             audioContainer.innerHTML = `<div class="text-slate-500">Generating audio...</div>`;
             
             const apiKey = ""; // API key will be injected by the environment
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
             
-            const cvText = `Say in a clear, professional, and friendly tone: Hello. I'm Nicholas Stemkowski. As an educator turned tech innovator, I work as the product leader for the AI research team at IQVIA. With over four years of product experience in AI and NLP, I have a proven ability to lead cross-functional teams, define product roadmaps, and execute go-to-market strategies for products that solve critical challenges.`;
+            const cvText = `Say in a clear, professional, and confident tone: Hello. My name is Nicholas Stemkowski. I am a hands-on product leader specialized in rapidly translating generative AI and agentic frameworks from frontier research into robust, high-impact production systems for the healthcare and life sciences sectors. I combine technical fluency with grounded product sense to synthesize complex AI capabilities into indispensable tools.`;
 
             const payload = {
                 contents: [{ parts: [{ text: cvText }] }],
                 generationConfig: {
                     responseModalities: ["AUDIO"],
-                    speechConfig: { 
-                        voiceConfig: { 
-                            // VOICE CHANGE: Changed from "Rasalgethi" to "Charon"
-                            prebuiltVoiceConfig: { voiceName: "Charon" } 
-                        } 
-                    }
+                    speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: "Rasalgethi" } } }
                 },
                 model: "gemini-2.5-flash-preview-tts"
             };
@@ -391,34 +362,14 @@
         const sendButton = document.getElementById('send-button');
         let chatHistory = [];
 
-        // ===================================================================================
-        // === HOW TO UPDATE THE CHATBOT'S KNOWLEDGE (YOUR GOOGLE DRIVE ALTERNATIVE) ===
-        // ===================================================================================
-        // To update the AI clone's knowledge, copy the text from your documents (e.g., from 
-        // Google Drive, Notion, etc.) and paste it inside the backticks (``) of the 
-        // `systemPrompt` variable below. 
-        //
-        // You can add project details, case studies, answers to common questions, or anything
-        // else you want the chatbot to know. This is its brain!
-        // ===================================================================================
-        const systemPrompt = `You are an AI clone of Nicholas Stemkowski, a Product Manager for the AI Research Team at IQVIA. Your knowledge base is his resume and the additional context provided here. Answer questions from his perspective. Be professional, confident, and focused on his skills and experience. Do not go outside this role or mention you are an AI.
-
-        --- START OF KNOWLEDGE BASE ---
-
-        **Resume Summary:**
-        - Role: Product Manager, AI Research Team at IQVIA (Sept 2023 - Present).
-        - Key Projects:
-          1. Advanced Clinical Reasoning Model: A Generative AI product taken from research concept to commercial deployment for pharmaceutical research and U.S. healthcare.
-          2. Active Learning Toolkit: A tool for clinical SMEs to fine-tune ML models, which achieved a 90% renewal rate.
-        - Responsibilities: End-to-end productization of AI research, rapid prototyping, GTM execution, product strategy, scaling AI infrastructure, and building secure model deployment solutions.
-        - Previous Role: Associate Product Manager at Predictable Innovation (2022-2023), focused on market intelligence for an AI platform.
-
-        **Additional Context (PASTE YOUR TEXT FROM GOOGLE DRIVE HERE):**
-        - My product philosophy is rooted in...
-        - A major challenge I solved on the Active Learning Toolkit project was...
-        - I am passionate about the intersection of AI and sustainable business models because...
-
-        --- END OF KNOWLEDGE BASE ---`;
+        const systemPrompt = `You are an AI clone of Nicholas Stemkowski, a product leader in Applied AI. Your knowledge base is his resume. Answer questions from his perspective. Be professional, confident, and focused. Key career highlights to draw from:
+        - At IQVIA (Sept 2023 - Present), he pioneered the productization of a generative AI clinical reasoning model, scaling it to 5 deployments with over 30 enterprise teams.
+        - He owned the strategy for three full-stack AI/NLP products, including an active learning toolkit for SMEs that resulted in a 90% renewal rate.
+        - He architected and rebuilt an internal AI orchestration platform into a high-throughput NLP provider processing millions of docs/hour.
+        - He designed multi-agent and generative AI frameworks for patient registries and clinical quality measures.
+        - He created a secure model registry for compliant deployment on sensitive healthcare infrastructure.
+        - At Predictable Innovation (2022-2023), he led market research for an AI platform and developed GTM strategies for various tech companies.
+        Do not go outside this role or mention you are an AI.`;
 
         chatHistory.push({ role: "system", parts: [{ text: systemPrompt }] });
         
@@ -446,15 +397,13 @@
                     body: JSON.stringify(payload)
                 });
                 
-                if (!response.ok) {
-                    throw new Error(`API Error: ${response.statusText}`);
-                }
+                if (!response.ok) { throw new Error(`API Error: ${response.statusText}`); }
 
                 const result = await response.json();
                 
                 typingIndicator.remove();
                 
-                if (result.candidates && result.candidates.length > 0 && result.candidates[0].content.parts[0].text) {
+                if (result.candidates && result.candidates.length > 0) {
                     const aiMessage = result.candidates[0].content.parts[0].text;
                     appendMessage(aiMessage, 'ai');
                     chatHistory.push({ role: "model", parts: [{ text: aiMessage }] });
@@ -496,7 +445,6 @@
                 handleSendMessage();
             }
         });
-
     </script>
 </body>
 </html>
